@@ -11,7 +11,7 @@
 # Also, on Sun machines, in order to use the SPIXTOOLS and SHADE,
 # uncomment this option: -static.
 #
-CC = /export/ramoth4/bishop/simplescalar/bin/ssbig-na-sstrix-gcc
+CC = ~/How-to-install-SimpleScalar-on-Ubuntu-master/build/bin/sslittle-na-sstrix-gcc
 # LFLAGS = -mv8
 # LFLAGS = $(LFLAGS) -static
 #
