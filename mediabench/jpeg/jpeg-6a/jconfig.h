@@ -7,7 +7,7 @@
 #define HAVE_UNSIGNED_SHORT 
 #undef void
 #undef const
-#undef CHAR_IS_UNSIGNED
+#define CHAR_IS_UNSIGNED 
 #define HAVE_STDDEF_H 
 #define HAVE_STDLIB_H 
 #undef NEED_BSD_STRINGS

@@ -23,17 +23,11 @@ Before compile simplescalar compiler must be installed. For this porpose, a simp
 
 ## Compile and run
 
-Each benchmark can be compiled as follows or simply running the script [compile_all](https://github.com/mlurbe97/Mediabench-for-IBM-Power/blob/master/compile_all) from this repository.
+Each benchmark can be compiled as follows or simply running the script [compile_all](https://github.com/mlurbe97/Mediabench-for-IBM-Power/blob/master/compile_all) from this repository. Work in progress.
 
 The [mediabench](https://github.com/mlurbe97/Mediabench-for-IBM-Power/blob/master/mediabench) folder contains the original benchmarks from the original source edited with the following rules.
 
 ### adpcm
-
-- From the original source, to be compiled on the IBM POWER, line 14 of the Makefile must be commented:
-
-```
-# CC = /export/ramoth4/bishop/simplescalar/bin/ssbig-na-sstrix-gcc
-```
 
 - To compile simply run:
 
@@ -52,14 +46,6 @@ The [mediabench](https://github.com/mlurbe97/Mediabench-for-IBM-Power/blob/maste
 
 ### epic
 
-- From the original source, to be compiled on the IBM POWER, line 33 of the Makefile must be commented:
-
-```
-# CC = ../../../bin/ssbig-na-sstrix-gcc
-```
-
-- In addition, in lines 47 and 49 of the Makefile, *-lm* option must be uncommented.
-
 - To compile simply run:
 
 ```
@@ -76,12 +62,6 @@ The [mediabench](https://github.com/mlurbe97/Mediabench-for-IBM-Power/blob/maste
 ```
 
 ### g721
-
-- From the original source, to be compiled on the IBM POWER, line 9 of the Makefile must be commented:
-
-```
-# CC =  ../../../bin/ssbig-na-sstrix-gcc # gcc -mv8 -static
-```
 
 - To compile simply run:
 
@@ -101,12 +81,6 @@ The [mediabench](https://github.com/mlurbe97/Mediabench-for-IBM-Power/blob/maste
 ### ghostscript
 
 stdio muy viejo para ubuntu 18.04
-
-- From the original source, to be compiled on the IBM POWER, line 175 of the Makefile must be commented:
-
-```
-# CC=../../../bin/ssbig-na-sstrix-gcc -static -ansi -I ../../../ssbig-na-sstrix/include #gcc -mv8 -static
-```
 
 - In addition, in line 325 of the Makefile, *-mv8* option must be commented.
 

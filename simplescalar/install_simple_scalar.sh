@@ -1,4 +1,5 @@
 #!/bin/sh
+
 set -e # To stop as soon as an error occured
 
 # This is the only line requiring root permission
