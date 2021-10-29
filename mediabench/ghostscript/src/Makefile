@@ -173,7 +173,7 @@ CONFIG=
 
 # Define the name of the C compiler.
 
-CC=../../../bin/ssbig-na-sstrix-gcc -static -ansi -I ../../../ssbig-na-sstrix/include #gcc -mv8 -static
+CC=~/git/Mediabench-for-IBM-Power/simplescalar/build/ssbig-na-sstrix/bin/gcc -static -ansi -I ~/git/Mediabench-for-IBM-Power/simplescalar/build/ssbig-na-sstrix/include #gcc -mv8 -static
 
 # Define the name of the linker for the final link step.
 # Normally this is the same as the C compiler.
