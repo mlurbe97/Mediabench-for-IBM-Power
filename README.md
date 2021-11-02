@@ -171,6 +171,197 @@ stdio muy viejo para ubuntu 18.04
 
 - Work in progress...
 
+## Compile and run Mediabench II
+
+Each benchmark can be compiled as follows or simply running the script [compile_all](https://github.com/mlurbe97/Mediabench-for-IBM-Power/blob/master/compile_all) from this repository. Work in progress.
+
+The [mediabench2](https://github.com/mlurbe97/Mediabench-for-IBM-Power/blob/master/mediabench2) folder contains the original benchmarks from the original source edited with the following rules.
+
+### cjpeg
+
+- To compile simply run:
+
+```
+    cd mediabench2/cjpeg/
+    tar -xf jpegsrc.v6b.tar.gz
+    cd jpeg-6b/
+    make clean
+    ./configure
+    make
+```
+
+### djpeg
+
+- If cjpeg is installed:
+
+```
+    cd mediabench2/djpeg/
+    ln -s ../cjpeg/jpeg-6b/
+```
+
+- If not, to compile simply run:
+
+```
+    cd mediabench2/djpeg/
+    tar -xf jpegsrc.v6b.tar.gz
+    cd jpeg-6b/
+    make clean
+    ./configure
+    make
+```
+
+### h263enc
+
+- To compile simply run:
+
+```
+    cd mediabench2/h263enc/
+    tar -xf tmn-1.7.tar.gz
+    cd tmn-1.7/
+    make clean
+    make all
+```
+
+### h263dec
+
+- If h263enc is installed:
+
+```
+    cd mediabench2/h263dec/
+    ln -s ../h263enc/tmn-1.7/
+```
+
+- If not, to compile simply run:
+
+```
+    cd mediabench2/h263dec/
+    tar -xf tmn-1.7.tar.gz
+    cd tmn-1.7/
+    make clean
+    make all
+```
+
+### h264enc
+
+- To compile simply run:
+
+```
+    cd mediabench2/h264enc/
+    unzip jm10.2.zip
+    cd JM/
+    sh unixprep.sh
+    cd lencod/
+    make
+```
+
+### h264dec
+
+- To compile simply run:
+
+```
+    cd mediabench2/h264dec/
+    unzip jm10.2.zip
+    cd JM/
+    sh unixprep.sh
+    cd ldecod/
+    make
+```
+
+### jpg2000enc
+
+- To compile simply run:
+
+```
+    cd mediabench2/jpg2000enc/
+    unzip jasper-1.701.0.zip
+    cd jasper-1.701.0/
+    ./configure --build=powerpc
+    make
+```
+
+### jpg2000dec
+
+- If jpg2000enc is installed:
+
+```
+    cd mediabench2/jpg2000dec/
+    ln -s ../jpg2000enc/jasper-1.701.0/
+```
+
+- If not, to compile simply run:
+
+```
+    cd mediabench2/jpg2000dec/
+    unzip jasper-1.701.0.zip
+    cd jasper-1.701.0/
+    ./configure --build=powerpc
+    make
+```
+
+### mpeg2enc
+
+- To compile simply run:
+
+```
+    cd mediabench2/mpeg2enc/
+    tar -xf mpeg2vidcodec_v12.tar.gz
+    cd mpeg2/
+    make
+```
+
+### mpeg2dec
+
+- If mpeg2enc is installed:
+
+```
+    cd mediabench2/mpeg2dec/
+    ln -s ../mpeg2enc/mpeg2/
+```
+
+- If not, to compile simply run:
+
+```
+    cd mediabench2/mpeg2dec/
+    tar -xf mpeg2vidcodec_v12.tar.gz
+    cd mpeg2/
+    make
+```
+
+### mpeg4enc
+
+- To compile simply run:
+
+```
+    sudo apt-get install libv4l-dev
+    sudo ln -s /usr/include/libv4l1-videodev.h   /usr/include/linux/videodev.h 
+    cd mediabench2/mpeg4enc/
+    tar -xf ffmpeg.2006_04_24.tgz
+    cd ffmpeg/
+    ./configure --disable-strip
+    make
+```
+
+### mpeg4dec
+
+- If mpeg4enc is installed:
+
+```
+    cd mediabench2/mpeg4dec/
+    ln -s ../mpeg4enc/ffmpeg/
+```
+
+- If not, to compile simply run:
+
+```
+    sudo apt-get install libv4l-dev
+    sudo ln -s /usr/include/libv4l1-videodev.h   /usr/include/linux/videodev.h 
+    cd mediabench2/mpeg4dec/
+    tar -xf ffmpeg.2006_04_24.tgz
+    cd ffmpeg/
+    ./configure --disable-strip
+    make
+```
+
 ## License
 
 Mediabench-for-IBM-Power
