@@ -5,6 +5,7 @@ cd mediabench2/cjpeg/
 tar -xf jpegsrc.v6b.tar.gz
 cd jpeg-6b/
 make clean
+chmod +x configure
 ./configure
 make
 
@@ -55,6 +56,7 @@ cd ../../../../
 cd mediabench2/jpg2000enc/
 unzip jasper-1.701.0.zip
 cd jasper-1.701.0/
+chmod +x configure
 ./configure --build=powerpc
 make
 
@@ -86,6 +88,7 @@ sudo ln -s /usr/include/libv4l1-videodev.h   /usr/include/linux/videodev.h
 cd mediabench2/mpeg4enc/
 tar -xf ffmpeg.2006_04_24.tgz
 cd ffmpeg/
+chmod +x configure
 ./configure --disable-strip
 make
 

@@ -1,67 +1,63 @@
 #!/bin/bash
 
-#cjpeg
-cd mediabench2/cjpeg/
-tar -xf jpegsrc.v6b.tar.gz
-cd jpeg-6b/
-make clean
-./configure
-make
-
-cd ../../../
-
-#djpeg
-cd mediabench2/djpeg/
-ln -s ../cjpeg/jpeg-6b/
-
-cd ../../
-
-#h263enc
-cd mediabench2/h263enc/
-tar -xf tmn-1.7.tar.gz
-cd tmn-1.7/
+#adpcm
+cd mediabench/adpcm/src/
 make clean
 make all
 
 cd ../../../
 
-#h263dec
-cd mediabench2/h263dec/
-ln -s ../h263enc/tmn-1.7/
-
-cd ../../
-
-#h264enc
-cd mediabench2/h264enc/
-unzip jm10.2.zip
-cd JM/
-sh unixprep.sh
-cd lencod/
-make
-
-cd ../../../../
-
-#h264dec
-cd mediabench2/h264dec/
-unzip jm10.2.zip
-cd JM/
-sh unixprep.sh
-cd ldecod/
-make
-
-cd ../../../../
-
-#jpg2000enc
-cd mediabench2/jpg2000enc/
-unzip jasper-1.701.0.zip
-cd jasper-1.701.0/
-./configure --build=powerpc
-make
+#epic
+cd mediabench/epic/src/
+make clean
+make all
 
 cd ../../../
 
-#jpg2000dec
-cd mediabench2/jpg2000dec/
-ln -s ../jpg2000enc/jasper-1.701.0/
+#g721
+cd mediabench/g721/src/
+make clean
+make all
 
-cd ../../
+cd ../../../
+
+#ghostscript
+#cd mediabench/ghostscript/src/
+#make clean
+#make all
+
+#cd ../../../
+
+#gsm
+#cd mediabench/gsm/
+#make install
+
+#cd ../../
+
+#jpeg
+cd mediabench/jpeg/jpeg-6a/
+chmod +x configure
+./configure
+make clean
+make all
+cp -rf cjpeg djpeg jpegtran rdjpgcom wrjpgcom ../bin/
+
+cd ../../../
+
+#mesa
+cd mediabench/mesa/
+make clean
+make linux
+cd demos/
+make clean
+make linux
+
+cd ../../../
+
+#mpeg2
+
+#pegwit
+
+#pgp
+
+#rasta
