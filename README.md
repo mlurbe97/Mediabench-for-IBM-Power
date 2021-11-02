@@ -21,7 +21,7 @@ Our testing platform can differ yours. This are our specifications:
 
 Before compile simplescalar compiler must be installed. For this porpose, a simplescalar autoinstallable version is available on simplescalar folder. This installer can be fount at github [How-to-install-SimpleScalar-on-Ubuntu](https://github.com/sdenel/How-to-install-SimpleScalar-on-Ubuntu) developed by sdenel.
 
-## Compile and run
+## Compile and run Mediabench
 
 Each benchmark can be compiled as follows or simply running the script [compile_all](https://github.com/mlurbe97/Mediabench-for-IBM-Power/blob/master/compile_all) from this repository. Work in progress.
 
