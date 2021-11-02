@@ -332,7 +332,7 @@ The [mediabench2](https://github.com/mlurbe97/Mediabench-for-IBM-Power/blob/mast
 - To compile simply run:
 
 ```
-    sudo apt-get install libv4l-dev
+    sudo apt-get install -y libv4l-dev
     sudo ln -s /usr/include/libv4l1-videodev.h   /usr/include/linux/videodev.h 
     cd mediabench2/mpeg4enc/
     tar -xf ffmpeg.2006_04_24.tgz
@@ -353,7 +353,7 @@ The [mediabench2](https://github.com/mlurbe97/Mediabench-for-IBM-Power/blob/mast
 - If not, to compile simply run:
 
 ```
-    sudo apt-get install libv4l-dev
+    sudo apt-get install -y libv4l-dev
     sudo ln -s /usr/include/libv4l1-videodev.h   /usr/include/linux/videodev.h 
     cd mediabench2/mpeg4dec/
     tar -xf ffmpeg.2006_04_24.tgz

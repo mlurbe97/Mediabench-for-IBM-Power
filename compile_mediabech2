@@ -66,5 +66,34 @@ ln -s ../jpg2000enc/jasper-1.701.0/
 
 cd ../../
 
+#mpeg2enc
+cd mediabench2/mpeg2enc/
+tar -xf mpeg2vidcodec_v12.tar.gz
+cd mpeg2/
+make
+
+cd ../../../
+
+#mpeg2dec
+cd mediabench2/mpeg2dec/
+ln -s ../mpeg2enc/mpeg2/
+
+cd ../../
+
+#mpeg4enc
+sudo apt-get install -y libv4l-dev
+sudo ln -s /usr/include/libv4l1-videodev.h   /usr/include/linux/videodev.h 
+cd mediabench2/mpeg4enc/
+tar -xf ffmpeg.2006_04_24.tgz
+cd ffmpeg/
+./configure --disable-strip
+make
+
+cd ../../../
+
+#mpeg4dec
+cd mediabench2/mpeg4dec/
+ln -s ../mpeg4enc/ffmpeg/
+
 #mediabench reports
 make
